@@ -2,15 +2,15 @@ import React from "react";
 import { ReactDOM} from "react";
 import Weather from "./Weather";
 
+
 const api = process.env.REACT_APP_API_KEY;
-function handleClick(){
-    alert(api)
-}
+console.log(api)
 function App(){
     
     return (
     <div>
-        <button onClick={handleClick}> click me to show api</button>
+        <h1> {api}</h1>
+       
         <Weather />
     </div>
     )
