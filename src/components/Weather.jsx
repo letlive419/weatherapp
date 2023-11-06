@@ -6,6 +6,9 @@ function Weather() {
     const api = process.env.REACT_APP_API_KEY;
     const [dataToShow, setDataToShow] = useState(null);
     const [error, setError] = useState(null);
+    const [location, setLocation] = useState(null);
+    const [exposure, setExposure] = useState(null)
+
     //axios method to get data
     useEffect(() => {
       // defining the function inside useEffect
@@ -23,9 +26,11 @@ function Weather() {
         }
       }
       fetchData();
-    });
+    },[location,api]);
        
-      
+    function handleChange(event)  {
+      setLocation(event.target.value)
+    }
 
       if (dataToShow === null && error === null) {
         return <div>Loading...</div>;
@@ -38,37 +43,37 @@ function Weather() {
     
 
     return(
-        <div class="weather-widget">
-        <div class="search-box">
-          <input type="text" placeholder="Enter a city..." />
+        <div className="weather-widget">
+        <div className="search-box">
+          <input type="text" value={location} onChange={handleChange} placeholder="Enter a city..." />
         </div>
-        <div class="current-weather">
+        <div className="current-weather">
           <h2>Today</h2>
           <h1>Miami</h1>
-          <div class="temperature">
+          <div className="temperature">
             <span>{dataToShow}</span>
             <p>clear sky</p>
           </div>
         </div>
-        <div class="future-weather">
-          <div class="day-weather">
+        <div className="future-weather">
+          <div className="day-weather">
             <p>Wednesday</p>
-            <div class="icon sunny"></div>
+            <div className="icon sunny"></div>
             <span>21°C</span>
           </div>
-          <div class="day-weather">
+          <div className="day-weather">
             <p>Thursday</p>
-            <div class="icon cloudy"></div>
+            <div className="icon cloudy"></div>
             <span>24°C</span>
           </div>
-          <div class="day-weather">
+          <div className="day-weather">
             <p>Friday</p>
-            <div class="icon sunny"></div>
+            <div className="icon sunny"></div>
             <span>21°C</span>
           </div>
-          <div class="day-weather">
+          <div className="day-weather">
             <p>Saturday</p>
-            <div class="icon partly-cloudy"></div>
+            <div className="icon partly-cloudy"></div>
             <span>24°C</span>
           </div>
         </div>
