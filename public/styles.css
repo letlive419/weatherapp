@@ -1,9 +1,67 @@
-body {
-    background-image: url("https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2848&q=80");
-    width: 100vw;
-    height: 100vh;
-    background-size:cover;
-    background-position: center;
-    height: 100%;
-    
-}
+.weather-widget {
+    background: url('https://wallpapers.com/images/featured/sunset-sky-background-s66lybexu36q5jc3.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    padding: 20px;
+    width: 500px; /* Adjust as needed */
+  }
+  
+  .search-box input {
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .current-weather h1,
+  .current-weather h2 {
+    margin: 0;
+  }
+  
+  .temperature {
+    display: flex;
+    align-items: center;
+  }
+  
+  .temperature span {
+    font-size: 3em;
+    font-weight: bold;
+  }
+  
+  .future-weather {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .day-weather {
+    text-align: center;
+  }
+  
+  .day-weather p {
+    margin: 0;
+  }
+  
+  .icon {
+    height: 50px; /* Icon size */
+    width: 50px; /* Icon size */
+    margin: 5px auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .icon.sunny {
+    background-image: url('path-to-your-sunny-icon.png');
+  }
+  
+  .icon.cloudy {
+    background-image: url('path-to-your-cloudy-icon.png');
+  }
+  
+  .icon.partly-cloudy {
+    background-image: url('path-to-your-partly-cloudy-icon.png');
+  }
+  

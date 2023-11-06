@@ -38,9 +38,41 @@ function Weather() {
     
 
     return(
-        <div className="weather">
-            <h1> Here is the weather = {dataToShow} F </h1>
+        <div class="weather-widget">
+        <div class="search-box">
+          <input type="text" placeholder="Enter a city..." />
         </div>
+        <div class="current-weather">
+          <h2>Today</h2>
+          <h1>Miami</h1>
+          <div class="temperature">
+            <span>{dataToShow}</span>
+            <p>clear sky</p>
+          </div>
+        </div>
+        <div class="future-weather">
+          <div class="day-weather">
+            <p>Wednesday</p>
+            <div class="icon sunny"></div>
+            <span>21°C</span>
+          </div>
+          <div class="day-weather">
+            <p>Thursday</p>
+            <div class="icon cloudy"></div>
+            <span>24°C</span>
+          </div>
+          <div class="day-weather">
+            <p>Friday</p>
+            <div class="icon sunny"></div>
+            <span>21°C</span>
+          </div>
+          <div class="day-weather">
+            <p>Saturday</p>
+            <div class="icon partly-cloudy"></div>
+            <span>24°C</span>
+          </div>
+        </div>
+      </div>
     )
 
 }
